@@ -1,8 +1,155 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
 :root{
     --bgc: #12335e;
     --font-h: #127070;
     --font-p: #f49ecb;
     --color4: #f6b7a7;
     --color5: #1ab793;
+    font-family: sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+/* HEADER */
+header {
+    background-color: var(--bgc);
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
+#social{
+    list-style-type: none;
+    color: var(--font-h);
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: start;
+    align-items: flex-start;
+    font-size: 1.5rem;
+}
+#social a{
+    transition: color 0.3s ease;
+}
+
+#social a:hover{
+    color: var(--color4);
+}
+header a {
+    text-decoration: none;
+    color: var(--color5);
+} 
+/* Header Burgermenu */
+
+#menu {
+    position: relative;
+    top: 1rem;
+    right: 10px; 
+    z-index: 1;
+    height: 4em;
+ }
+#menu a {
+    transition: color 0.3s ease;
+}
+#menu a:hover{
+    color: var(--color4);
+}
+#menu input{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    right: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+#menu .burger{
+    display: block;
+    width: 33px;
+    height: 5px;
+    margin-bottom: 5px;
+    margin-right: 1rem;
+    background-color: var(--color5);
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: 
+        transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+        background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+        opacity 0.55s ease; 
+}
+#menu .burger.oben{
+    transform-origin: 0% 0%;
+}
+#menu .burger.unten{
+    transform-origin: 0% 100%;
+}
+#menu input:checked ~ .burger.oben {
+    opacity: 1;
+    transform: scaleX(1) translate(-2.5px, -1px)  rotate(45deg) ;
+    background-color: var(--color5);
+}
+ 
+#menu input:checked ~ .burger.mitte{
+    opacity: 0;
+}
+#menu input:checked ~ .burger.unten{
+    transform: scale(1) rotate(-45deg) translate(-2.5px, -1px);
+}
+#menu-unrole {
+    width: 100vw;
+    opacity: 0;
+    position: absolute;
+    right: -10px;
+    top: 2rem;    
+    z-index: 2;
+    list-style-type: none;
+    background-color: var(--bgc);
+    transform-origin: top right;
+    transform: scaleY(0);
+    transition: transform 0.5s cubic-bezier(0.78, 0.29, 0.02, 0.64), opacity 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#menu-unrole li {
+    padding: 10px;
+    font-size: 1.5rem;
+}
+#menu input:checked ~ ul
+{
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+/* Main */
+
+#main{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../image/city-g64597c463_1920_grey.jpg);
+    object-position: cover;
+    background-repeat: no-repeat;
+}
+
+#main h1{
+    margin-top: 0;
+    padding: 2rem;
+    color: var(--font-h);
+    text-shadow: 1px 1px 1px var(--color5);
+}
+#main p{
+    padding: 2rem;
+    color: var(--font-h);
+    text-shadow: 1px 1px 1px var(--color5);
+}
