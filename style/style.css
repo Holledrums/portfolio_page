@@ -138,8 +138,9 @@ header a {
     height: 100vh;
     width: 100vw;
     background-image: url(../image/city-g64597c463_1920_grey.jpg);
-    object-position: cover;
+    background-position: top center;
     background-repeat: no-repeat;
+    
 }
 
 #main h1{
