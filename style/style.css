@@ -313,8 +313,17 @@ footer div, footer nav {
     margin: 0;
     padding: 0;
 }
+#main-impressum aside{
+    padding-left: 2rem;
+    max-width: 80vw;
+    text-align: justify;
+}
+#main-impressum aside a{
+    color: var(--font-h);
+    text-decoration: none;
+}
 
-#main-impressum h2{
+#main-impressum h2, #main-impressum h3, #main-impressum h4{
     margin-top: 0;
     margin-right: 0;
     padding: 2rem;
@@ -331,7 +340,7 @@ footer div, footer nav {
 
 @media (min-width: 1048px) {
     #body {
-        min-height: 100vh;
+        height: 100vh;
         display: grid;
         grid-template-columns: max-content 1fr;
         grid-template-rows: 1fr max-content;
@@ -389,4 +398,13 @@ footer div, footer nav {
     #copy {
         text-align: left;
     }
+    #main-impressum aside{
+        margin-top: 2.5%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        max-height: 90%;
+        max-width: 80%;
+        overflow-y: auto;
+    }
+    
 }
