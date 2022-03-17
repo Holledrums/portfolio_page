@@ -18,6 +18,7 @@ body{
     "main" 1fr
     "footer" auto/ 1fr;
 }
+/*Style Index*/
 /* HEADER */
 header {
     grid-area: header;
@@ -42,7 +43,17 @@ figure a img {
     object-fit: cover;
     
 }
+header aside {
+    display: none;
+    padding-left: 2.5rem;
+    text-align: justify;
+    color: var(--color5);
+    transition: color 0.2s ease;
+}
 
+header aside:hover {
+    color: var(--color4);
+}
 
 #social{
     list-style-type: none;
@@ -55,7 +66,7 @@ figure a img {
     font-size: 1.5rem;
 }
 #social a{
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 
 #social a:hover{
@@ -75,7 +86,7 @@ header a {
     height: 4em;
  }
 #menu a {
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 #menu a:hover{
     color: var(--color4);
@@ -149,7 +160,6 @@ header a {
 {
   transform: scaleY(1);
   opacity: 0.8;
-  
 }
 
 /* Main */
@@ -167,7 +177,7 @@ header a {
         
 }
 
-#main h1{
+#main h2{
     margin-top: 0;
     margin-right: 0;
     padding: 2rem;
@@ -209,7 +219,7 @@ footer {
 #reference a{
     text-decoration: none;
     color: var(--color5);
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 #reference a:hover{
     color: var(--color4);
@@ -221,6 +231,100 @@ footer div, footer nav {
     padding-right: 2rem;
     color: var(--color5);
     text-align: right;
+}
+#copy {
+    font-size: 0.8rem;
+}
+
+/* style about page */
+#main-about{
+    grid-area: main;
+    min-height: calc(100vh - 8.5rem);
+    width: 100vw; 
+    margin: 0;
+    padding: 0;
+            
+}
+
+#main-about h2{
+    margin-top: 0;
+    margin-right: 0;
+    padding: 2rem;
+    color: var(--font-h);
+    text-shadow: 1px 1px 1px var(--color5);
+}
+#main-about p{
+    padding-left: 2rem;
+    color: var(--font-h);
+    text-shadow: 1px 1px 2px var(--color5);
+}
+
+/* style portfolio page */
+
+#main-portfolio{
+    grid-area: main;
+    min-height: calc(100vh - 8.5rem);
+    width: 100vw; 
+    margin: 0;
+    padding: 0;
+    
+}
+
+#main-portfolio h2{
+    margin-top: 0;
+    margin-right: 0;
+    padding: 2rem;
+    color: var(--font-h);
+    text-shadow: 1px 1px 1px var(--color5);
+}
+#main-portfolio p{
+    padding-left: 2rem;
+    color: var(--font-h);
+    text-shadow: 1px 1px 2px var(--color5);
+}
+/* style contact page */
+
+#main-contact{
+    grid-area: main;
+    min-height: calc(100vh - 8.5rem);
+    width: 100vw; 
+    margin: 0;
+    padding: 0;
+}
+
+#main-contact h2{
+    margin-top: 0;
+    margin-right: 0;
+    padding: 2rem;
+    color: var(--font-h);
+    text-shadow: 1px 1px 1px var(--color5);
+}
+#main-contact p{
+    padding-left: 2rem;
+    color: var(--font-h);
+    text-shadow: 1px 1px 2px var(--color5);
+}
+/* style impressum page */
+
+#main-impressum{
+    grid-area: main;
+    min-height: calc(100vh - 8.5rem);
+    width: 100vw; 
+    margin: 0;
+    padding: 0;
+}
+
+#main-impressum h2{
+    margin-top: 0;
+    margin-right: 0;
+    padding: 2rem;
+    color: var(--font-h);
+    text-shadow: 1px 1px 1px var(--color5);
+}
+#main-impressum p{
+    padding-left: 2rem;
+    color: var(--font-h);
+    text-shadow: 1px 1px 2px var(--color5);
 }
 
 /* Mediaquerries */
@@ -243,6 +347,9 @@ footer div, footer nav {
     figure {
         display: block;
     }
+    header aside{
+        display: block;
+    }
     #social{
         justify-content: space-around;
         padding: 0;
@@ -258,7 +365,11 @@ footer div, footer nav {
     #menu {
         position: static;
     }
-    #main {
+    #main, #main-portfolio, 
+    #main-impressum, 
+    #main-about, 
+    #main-portfolio, 
+    #main-contact {
         grid-area: main;
     }
     #menu .burger {
@@ -273,7 +384,9 @@ footer div, footer nav {
 
     }
     #footer *{
-        margin: 0;
-        
+        margin: 0;        
+    }
+    #copy {
+        text-align: left;
     }
 }
